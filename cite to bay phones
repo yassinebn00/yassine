@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .phone-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .phone-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .phone-card .details {
+            padding: 15px;
+        }
+        .phone-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+        .phone-card p {
+            margin: 0 0 15px;
+            color: #555;
+        }
+        .phone-card button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .phone-card button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Phone Store</h1>
+        <p>Browse and buy your favorite phones</p>
+    </header>
+
+    <div class="container">
+        <!-- Example phone card -->
+        <div class="phone-card">
+            <img src="https://via.placeholder.com/300x200" alt="Phone 1">
+            <div class="details">
+                <h3>Phone Model A</h3>
+                <p>$699</p>
+                <button onclick="buyNow('Phone Model A', 699)">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="phone-card">
+            <img src="https://via.placeholder.com/300x200" alt="Phone 2">
+            <div class="details">
+                <h3>Phone Model B</h3>
+                <p>$799</p>
+                <button onclick="buyNow('Phone Model B', 799)">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="phone-card">
+            <img src="https://via.placeholder.com/300x200" alt="Phone 3">
+            <div class="details">
+                <h3>Phone Model C</h3>
+                <p>$899</p>
+                <button onclick="buyNow('Phone Model C', 899)">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function buyNow(phoneModel, price) {
+            alert(`You selected ${phoneModel} for $${price}. Proceeding to checkout...`);
+            // Add functionality to handle the purchase
+        }
+    </script>
+</body>
+</html>
